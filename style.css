@@ -1,0 +1,148 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #070F14;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #112C3F;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.title-mobile {
+  display: none;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  color: #f7f7f7;
+}
+
+.sidebar h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #1a66bc;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(100% - 250px);
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.card {
+  background-color: #112C3F;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+}
+
+.card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #cacaca;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+canvas.chart {
+  width: 100%;
+  height: 300px; /* Ajuste a altura aqui */
+}
+
+canvas.round-chart {
+  width: 100%;
+  height: 300px; /* Ajuste a altura aqui */
+  max-width: 600px;
+  max-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .title-mobile {
+      display: block;
+      color: #f7f7f7;
+      text-align: center;
+      font-size: 2em;
+  }
+
+  .sidebar {
+      display: none;
+  }
+
+  .main-content {
+      margin-left: 0;
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
